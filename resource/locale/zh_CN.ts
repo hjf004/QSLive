@@ -225,7 +225,7 @@
     <message>
         <location filename="../../source/mainwindow.cpp" line="142"/>
         <source>QSLive is a front-end of sopcast which allows you to watch free online TV channels,and also to broadcast your own with peer to peer (P2P) technology.The linux version of sopcast only provide a command line back -end,and you can only watch online tv with media player such as mplayer or vlc.QSLive written with Qt makes it easy to watch online tv with sopcast in linux.</source>
-        <translation type="unfinished">QSlive是Sopcast的前端，Sopcast使用P2P技术，允许您观看免费的在线电视频道，并广播自己的电视节目。Sopcast的Linux版本只提供命令行的后端，需要使用其他的流媒体播放器如Mplay、VlC Media Player才能观看节目。QSLive用Qt所写，让您在Linux下更容易地使用Sopcast观看电视节目。</translation>
+        <translation type="unfinished">QSlive是Sopcast的前端，Sopcast使用P2P技术，允许您观看免费的在线电视频道，并广播自己的电视节目。Sopcast的Linux版本只提供命令行的后端，需要使用其他的流媒体播放器如Mplayer、VLC Media Player才能观看节目。QSLive用Qt所写，让您在Linux下更容易地使用Sopcast观看电视节目。</translation>
     </message>
     <message>
         <source>QSLive is a front-end of sopcast which allows you to watch free online TV channels,and also to broadcast your own with peer to peer (P2P) technology.The linux version of sopcast only provide a command line back-end,and you can only watch online tv with media player such asmplayer or vlc.QSLive written with Qt makes it easy to watch onlietv with sopcast in linux.</source>
