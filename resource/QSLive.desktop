@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=QSLive
+Icon=
+Comment=Sopcast GUI Front-end,Online TV Player
+Comment[zh_CN]=Sopcast图形前端,在线电视播放器
+Exec=qslive
+Terminal=false
+Type=Application
+Categories=AudioVideo;Player;
+ 
+
