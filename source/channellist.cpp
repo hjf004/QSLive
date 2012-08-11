@@ -175,7 +175,7 @@ void ChannelList::handleAdd()
         saveList();
     }
     else
-        QMessageBox::warning(this,QString(),tr("This Channel already in the Favorite Channel List!"));
+        QMessageBox::warning(this,QString(),QObject::tr("This Channel already in the Favorite Channel List!"));
 }
 
 void ChannelList::handleRemove()

@@ -193,7 +193,7 @@
     </message>
     <message>
         <location filename="../../source/mainwindow.cpp" line="34"/>
-        <location filename="../../source/mainwindow.cpp" line="95"/>
+        <location filename="../../source/mainwindow.cpp" line="97"/>
         <source>&amp;Hide Channel List</source>
         <translation type="unfinished">隐藏频道列表</translation>
     </message>
@@ -213,6 +213,25 @@
         <translation type="unfinished">清空收藏列表(&amp;C)</translation>
     </message>
     <message>
+        <location filename="../../source/mainwindow.cpp" line="65"/>
+        <source>QSLive--Online TV Player</source>
+        <translation type="unfinished">QSLive--在线电视播放器</translation>
+    </message>
+    <message>
+        <location filename="../../source/mainwindow.cpp" line="142"/>
+        <source>About QSLive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/mainwindow.cpp" line="142"/>
+        <source>QSLive is a front-end of sopcast which allows you to watch free online TV channels,and also to broadcast your own with peer to peer (P2P) technology.The linux version of sopcast only provide a command line back -end,and you can only watch online tv with media player such as mplayer or vlc.QSLive written with Qt makes it easy to watch online tv with sopcast in linux.</source>
+        <translation type="unfinished">QSlive是Sopcast的前端，Sopcast使用P2P技术，允许您观看免费的在线电视频道，并广播自己的电视节目。Sopcast的Linux版本只提供命令行的后端，需要使用其他的流媒体播放器如Mplay、VlC Media Player才能观看节目。QSLive用Qt所写，让您在Linux下更容易地使用Sopcast观看电视节目。</translation>
+    </message>
+    <message>
+        <source>QSLive is a front-end of sopcast which allows you to watch free online TV channels,and also to broadcast your own with peer to peer (P2P) technology.The linux version of sopcast only provide a command line back-end,and you can only watch online tv with media player such asmplayer or vlc.QSLive written with Qt makes it easy to watch onlietv with sopcast in linux.</source>
+        <translation type="obsolete">QSlive是Sopcast的前端，Sopcast使用P2P技术，允许您观看免费的在线电视频道，并广播自己的电视节目。Sopcast的Linux版本只提供命令行的后端，需要使用其他的流媒体播放器如Mplay、VlC Media Player才能观看节目。QSLive用Qt所写，让您在Linux下更容易地使用Sopcast观看电视节目。</translation>
+    </message>
+    <message>
         <source>&amp;Add to Favorite List</source>
         <translation type="obsolete">添加到列表(&amp;A)</translation>
     </message>
@@ -228,32 +247,32 @@
     </message>
     <message>
         <location filename="../../source/mainwindow.cpp" line="49"/>
-        <location filename="../../source/mainwindow.cpp" line="109"/>
+        <location filename="../../source/mainwindow.cpp" line="111"/>
         <source>About Qt</source>
         <translation type="unfinished">关于Qt</translation>
     </message>
     <message>
-        <location filename="../../source/mainwindow.cpp" line="76"/>
+        <location filename="../../source/mainwindow.cpp" line="78"/>
         <source>Please input the Channel Url</source>
         <translation type="unfinished">请输入频道地址</translation>
     </message>
     <message>
-        <location filename="../../source/mainwindow.cpp" line="76"/>
+        <location filename="../../source/mainwindow.cpp" line="78"/>
         <source>Url</source>
         <translation type="unfinished">频道地址</translation>
     </message>
     <message>
-        <location filename="../../source/mainwindow.cpp" line="97"/>
+        <location filename="../../source/mainwindow.cpp" line="99"/>
         <source>&amp;Show Channel List</source>
         <translation type="unfinished">显示频道列表</translation>
     </message>
     <message>
-        <location filename="../../source/mainwindow.cpp" line="103"/>
+        <location filename="../../source/mainwindow.cpp" line="105"/>
         <source>Settings</source>
         <translation type="unfinished">设置</translation>
     </message>
     <message>
-        <location filename="../../source/mainwindow.cpp" line="122"/>
+        <location filename="../../source/mainwindow.cpp" line="124"/>
         <source>Add Channel To List</source>
         <translation type="unfinished">添加到收藏列表</translation>
     </message>
@@ -273,37 +292,42 @@
         <translation type="unfinished">收藏的频道</translation>
     </message>
     <message>
-        <location filename="../../source/channellist.cpp" line="152"/>
+        <location filename="../../source/channellist.cpp" line="160"/>
         <source>Channel Name=</source>
         <translation type="unfinished">频道名称=</translation>
     </message>
     <message>
-        <location filename="../../source/channellist.cpp" line="154"/>
+        <location filename="../../source/channellist.cpp" line="162"/>
         <source>Channel Url=</source>
         <translation type="unfinished">频道地址=</translation>
     </message>
     <message>
-        <location filename="../../source/channellist.cpp" line="155"/>
+        <location filename="../../source/channellist.cpp" line="163"/>
         <source>Channel Info</source>
         <translation type="unfinished">频道信息</translation>
     </message>
     <message>
-        <location filename="../../source/channellist.cpp" line="188"/>
+        <location filename="../../source/channellist.cpp" line="178"/>
+        <source>This Channel already in the Favorite Channel List!</source>
+        <translation type="unfinished">该频道已经在收藏列表！</translation>
+    </message>
+    <message>
+        <location filename="../../source/channellist.cpp" line="202"/>
         <source>Please input the New Channel Name</source>
         <translation type="unfinished">请输入新的频道名称</translation>
     </message>
     <message>
-        <location filename="../../source/channellist.cpp" line="188"/>
+        <location filename="../../source/channellist.cpp" line="202"/>
         <source>New Channel Name</source>
         <translation type="unfinished">新频道名称</translation>
     </message>
     <message>
-        <location filename="../../source/channellist.cpp" line="204"/>
+        <location filename="../../source/channellist.cpp" line="218"/>
         <source>Please input the New Channel Url</source>
         <translation type="unfinished">请输入新的频道地址</translation>
     </message>
     <message>
-        <location filename="../../source/channellist.cpp" line="204"/>
+        <location filename="../../source/channellist.cpp" line="218"/>
         <source>New Channel Url</source>
         <translation type="unfinished">新地址</translation>
     </message>
