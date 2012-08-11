@@ -38,6 +38,9 @@ target.files = bin/qslive
 target.path = /usr/local/bin
 locales.files += resource/locale/zh_CN.qm
 locales.path = /usr/local/share/qslive/locales
+desktop.files += resource/QSLive.desktop
+desktop.path = /usr/local/share/applications
 INSTALLS += target \
-    locales
+    locales \
+    desktop
 }
