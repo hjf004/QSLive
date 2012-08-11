@@ -1,0 +1,13 @@
+Library requirements:
+Qt4, phonon-vlc
+
+Compilation and install: go to the project directory and execute the following commands:
+$qmake
+$make
+$sudo make install
+
+Usage:
+you need to download the Linux version command line executive sp-sc from
+http://www.sopcast.com
+and install it before using QSLive
+
