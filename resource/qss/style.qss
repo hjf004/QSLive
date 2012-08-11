@@ -1,0 +1,29 @@
+QTreeView::branch:has-siblings:!adjoins-item {
+     image: none;
+ }
+
+ QTreeView::branch:has-siblings:adjoins-item {
+     image: none;
+ }
+
+ QTreeView::branch:!has-children:!has-siblings:adjoins-item {
+     image: none;
+ }
+
+QTreeWidget::branch:has-children:!has-siblings:closed,
+QTreeWidget::branch:closed:has-children:has-siblings {
+border-image: none;
+image: url(":/resource/pic/more.svg");
+}
+
+QTreeWidget::branch:open:has-children:!has-siblings,
+QTreeView::branch:open:has-children:has-siblings  {
+border-image: none;
+image: url(":/resource/pic/less.svg");
+}
+
+QSplitter {
+border:0px;
+padding:0px;
+}
+

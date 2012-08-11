@@ -1,0 +1,4 @@
+sopcast=sp-sc-auth
+channelxml=http://channel.sopcast.com/gchlxml
+inport=random
+outport=random

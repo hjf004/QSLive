@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resource/pic/fullscreen.png</file>
+        <file>resource/pic/hide.png</file>
+        <file>resource/pic/show.png</file>
+        <file>resource/pic/next.png</file>
+        <file>resource/pic/play.png</file>
+        <file>resource/pic/prev.png</file>
+        <file>resource/pic/refresh.png</file>
+        <file>resource/pic/stop.png</file>
+        <file>resource/pic/pause.png</file>
+        <file>resource/qss/style.qss</file>
+        <file>resource/pic/less.svg</file>
+        <file>resource/pic/more.svg</file>
+        <file>resource/config/config</file>
+        <file>resource/locale/zh_CN.qm</file>
+    </qresource>
+</RCC>
