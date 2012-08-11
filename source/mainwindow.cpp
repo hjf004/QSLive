@@ -62,6 +62,7 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent)
     connect(aboutAction,SIGNAL(triggered()),this,SLOT(handleAbout()));
     connect(aboutQtAction,SIGNAL(triggered()),this,SLOT(handleAboutQt()));
     setMenuBar(menuBar);
+    setWindowTitle(tr("QSLive--Online TV Player"));
 }
 
 void MainWindow::closeEvent(QCloseEvent *ce)
