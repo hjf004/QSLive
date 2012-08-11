@@ -70,9 +70,14 @@ void ChannelList::handleInit()
         qDebug()<<"Group "<<itr.key();
         for(int i=0;i<t.size()/2;i++)
         {
-            child=new QTreeWidgetItem(item,QStringList(t.at(i*2)));
+            QString name=t.at(i*2);
+            QString url=t.at(i*2+1);
+            child=new QTreeWidgetItem(item,QStringList(name));
             item->addChild(child);
-            allChannels.insert(t.at(i*2),t.at(i*2+1));
+            if(allChannels.find(name)==allChannels.end())
+                allChannels.insert(name,url);
+            else
+                 allChannels.insertMulti(name,url);
         }
         item->setExpanded(false);
     }
@@ -97,7 +102,10 @@ QTreeWidgetItem* ChannelList::addToList(QString name,QString url)
     QTreeWidgetItem *item=treeWidget->topLevelItem(0);
     QTreeWidgetItem *child=new QTreeWidgetItem(item,QStringList(name));
     item->addChild(child);
-    allChannels.insert(name,url);
+    if(allChannels.find(name)!=allChannels.end())
+        allChannels.insertMulti(name,url);
+    else
+        allChannels.insert(name,url);
     return child;
 }
 
@@ -158,10 +166,16 @@ void ChannelList::handleView()
 void ChannelList::handleAdd()
 {
     QTreeWidgetItem *item=treeWidget->currentItem();
+    QTreeWidgetItem *parentItem=item->parent();
     QString name=item->text(0);
     QString url=allChannels[name];
-    addToList(name,url);
-    saveList();
+    if(parentItem!=treeWidget->topLevelItem(0)&&allChannels.count(name)!=2)
+    {
+        addToList(name,url);
+        saveList();
+    }
+    else
+        QMessageBox::warning(this,QString(),tr("This Channel already in the Favorite Channel List!"));
 }
 
 void ChannelList::handleRemove()

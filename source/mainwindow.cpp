@@ -59,6 +59,7 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent)
     connect(hideListAction,SIGNAL(triggered()),this,SLOT(handleHideList()));
     connect(addToListAction,SIGNAL(triggered()),this,SLOT(handleAdd()));
     connect(clearAction,SIGNAL(triggered()),this,SLOT(handleClear()));
+    connect(aboutAction,SIGNAL(triggered()),this,SLOT(handleAbout()));
     connect(aboutQtAction,SIGNAL(triggered()),this,SLOT(handleAboutQt()));
     setMenuBar(menuBar);
 }
@@ -133,4 +134,15 @@ void MainWindow::handleClear()
         delete item;
     }
     player->channelList->saveList();
+}
+
+void MainWindow::handleAbout()
+{
+    QMessageBox::information(this,tr("About QSLive"),tr("QSLive is a front-end "
+                 "of sopcast which allows you to watch free online TV channels,"
+                 "and also to broadcast your own with peer to peer (P2P) technology."
+                 "The linux version of sopcast only provide a command line back"
+                 "-end,and you can only watch online tv with media player such as"
+                 "mplayer or vlc.QSLive written with Qt makes it easy to watch onlie"
+                 "tv with sopcast in linux."));
 }

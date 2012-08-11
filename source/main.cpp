@@ -2,9 +2,6 @@
 int main(int argc,char **argv)
 {
     QApplication app(argc,argv);
-//    QTextCodec::setCodecForLocale(QTextCodec::codecForName("UTF-8"));
-//    QTextCodec::setCodecForCStrings(QTextCodec::codecForName("UTF-8"));
-//    QTextCodec::setCodecForTr(QTextCodec::codecForName("UTF-8"));
     app.setApplicationName("QSLive");
     app.setStyle(new QPlastiqueStyle);
     QTranslator tran;

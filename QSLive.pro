@@ -1,3 +1,4 @@
+TEMPLATE = app
 QT += core gui phonon network xml
 HEADERS += header/centralwidget.h \
     header/channellist.h \
@@ -29,3 +30,14 @@ FORMS += \
     form/settingdialog.ui \
     form/channeldialog.ui
 TRANSLATIONS += resource/locale/zh_CN.ts
+
+TARGET = qslive
+DESTDIR = bin
+unix {
+target.files = bin/qslive
+target.path = /usr/local/bin
+locales.files += resource/locale/zh_CN.qm
+locales.path = /usr/local/share/qslive/locales
+INSTALLS += target \
+    locales
+}

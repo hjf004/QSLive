@@ -36,6 +36,7 @@ public slots:
     void handleReset();
     void handleAdd();
     void handleClear();
+    void handleAbout();
 };
 
 #endif // MAINWINDOW_H
