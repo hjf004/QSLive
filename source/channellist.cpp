@@ -35,6 +35,7 @@ ChannelList::ChannelList(QString s,QWidget *parent):QWidget(parent)
 void ChannelList::RefreshList()
 {
     treeWidget->clear();
+    allChannels.clear();
     emit listReady(false);
     treeWidget->setColumnCount(1);
     QTreeWidgetItem *item;
@@ -169,7 +170,7 @@ void ChannelList::handleAdd()
     QTreeWidgetItem *parentItem=item->parent();
     QString name=item->text(0);
     QString url=allChannels[name];
-    if(parentItem!=treeWidget->topLevelItem(0)&&allChannels.count(name)!=2)
+    if(parentItem!=treeWidget->topLevelItem(0)&&allChannels.count(name)<2)
     {
         addToList(name,url);
         saveList();
