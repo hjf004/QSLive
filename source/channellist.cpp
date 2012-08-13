@@ -166,10 +166,9 @@ void ChannelList::handleView()
 void ChannelList::handleAdd()
 {
     QTreeWidgetItem *item=treeWidget->currentItem();
-    QTreeWidgetItem *parentItem=item->parent();
     QString name=item->text(0);
     QString url=allChannels[name];
-    if(parentItem!=treeWidget->topLevelItem(0)&&allChannels.count(name)<2)
+    if(!inTheFavoriteList(name))
     {
         addToList(name,url);
         saveList();
@@ -222,4 +221,16 @@ void ChannelList::handleModifyUrl()
         allChannels.insert(name,newUrl);
         saveList();
     }
+}
+
+bool ChannelList::inTheFavoriteList(QString name)
+{
+    QTreeWidgetItem *fgroup=treeWidget->topLevelItem(0);
+    int count=fgroup->childCount();
+    for(int i=0;i<count;i++)
+    {
+        if(name==fgroup->child(i)->text(0))
+            return true;
+    }
+    return false;
 }

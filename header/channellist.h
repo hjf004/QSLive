@@ -19,6 +19,7 @@ public:
     QTreeWidgetItem* addToList(QString,QString);
     void readList();
     void saveList();
+    bool inTheFavoriteList(QString);
 private:
     QToolButton *refreshButton;
     QLabel *infoLabel;
