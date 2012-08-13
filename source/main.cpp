@@ -16,6 +16,5 @@ int main(int argc,char **argv)
         d.mkdir(configDir);
     MainWindow *mwin=new MainWindow();
     mwin->showMaximized();
-    //    mwin->show();
     return app.exec();
 }

@@ -12,6 +12,4 @@
 #include <stdlib.h>
 
 int connect_to_server(char *host, int portnum);
-//void killProcess (char *processName);
-
 #endif

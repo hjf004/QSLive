@@ -1,5 +1,4 @@
 #include"header/treewidget.h"
-
 TreeWidget::TreeWidget(QWidget *parent):QTreeWidget(parent)
 {
     menu=new QMenu(this);
@@ -17,5 +16,22 @@ TreeWidget::TreeWidget(QWidget *parent):QTreeWidget(parent)
 
 void TreeWidget::contextMenuEvent(QContextMenuEvent *e)
 {
+    add->setEnabled(true);
+    remove->setEnabled(true);
+    view->setEnabled(true);
+    modifyName->setEnabled(true);
+    modifyUrl->setEnabled(true);
+
+    QTreeWidgetItem *item=this->currentItem();
+    QTreeWidgetItem *parent=item->parent();
+    if(parent==this->topLevelItem(0))               //if channel in the favorite group
+        add->setEnabled(false);
+    else if(item->childCount()!=0)                  //if click on a group
+    {
+        add->setEnabled(false);
+        view->setEnabled(false);
+        remove->setEnabled(false);
+        modifyUrl->setEnabled(false);
+    }
     menu->exec(QCursor::pos());
 }

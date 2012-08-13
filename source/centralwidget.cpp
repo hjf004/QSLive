@@ -2,16 +2,13 @@
 CentralWidget::CentralWidget(QWidget *parent):QSplitter(parent)
 {
     showFlag=true;
-
     channelList=0;
-    bin="sp-sc-auth";
     process=new SpProcess(this);
     readConfig();
     channelList=new ChannelList(xmlUrl,this);
     box=new QGroupBox(this);
     groupBox=new QGroupBox(box);
     infoLabel=new QLabel(groupBox);
-    //    infoLabel->setMinimumWidth(40);
     infoLabel->setText(QObject::tr("Disconnected"));
     progressBar=new QProgressBar(groupBox);
     progressBar->setEnabled(false);
@@ -67,7 +64,6 @@ CentralWidget::CentralWidget(QWidget *parent):QSplitter(parent)
     nm=new QNetworkAccessManager(this);//
     nm->setNetworkAccessible(QNetworkAccessManager::Accessible);//
     mediaObject=new Phonon::MediaObject(this);
-    videoWidget->setSource(mediaObject);
     videoWidget->setParentWidget(this);
     audioOutput=new Phonon::AudioOutput(Phonon::VideoCategory,this);
     volumeSlider->setAudioOutput(audioOutput);
@@ -83,8 +79,6 @@ CentralWidget::CentralWidget(QWidget *parent):QSplitter(parent)
     connect(nextButton,SIGNAL(clicked()),this,SLOT(handleNext()));
     connect(fullScreenButton,SIGNAL(clicked()),this,SLOT(handleFullScreen()));
     connect(ShowOrHide,SIGNAL(clicked()),this,SLOT(handleShowOrHide()));
-    //    connect(mediaObject,SIGNAL(stateChanged(Phonon::State,Phonon::State)),this,SLOT(handlePlayState(Phonon::State,Phonon::State)));
-
 }
 
 void CentralWidget::initVideo(QString u)
@@ -124,11 +118,6 @@ void CentralWidget::handleShowOrHide()
     channelList->setVisible(showFlag);
     ShowOrHide->setIcon(showFlag?QIcon(":/resource/pic/hide.png"):QIcon(":/resource/pic/show.png"));
     ShowOrHide->setToolTip(showFlag?tr("Hide Channel List"):tr("Show Channel List"));
-}
-
-void CentralWidget::setToolBoxVisualble(bool b)
-{
-    groupBox->setVisible(b);
 }
 
 void CentralWidget::handlePlayState(Phonon::State newstate, Phonon::State oldstate)
@@ -243,15 +232,9 @@ void CentralWidget::readConfig()
 {
     QString config((QDir::homePath().append("/.config/QSLive/config")));
     if(QFile::exists(config))
-    {
-//        qDebug()<<"Config File Exists at home";
         parseConfig(config);
-    }
     else
-    {
-//        qDebug()<<"Config File Not Exists";
         parseConfig(":/resource/config/config");
-    }
 }
 
 void CentralWidget::parseConfig(QString config)

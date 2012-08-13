@@ -15,7 +15,6 @@ public:
     bool startSp(QString);
     void setPort(bool,int,int);
     bool customPort;
-    //    void KillSp();
 private:
     QStringList args;
     QString playUrl;

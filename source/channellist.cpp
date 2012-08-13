@@ -6,7 +6,6 @@ ChannelList::ChannelList(QString s,QWidget *parent):QWidget(parent)
     listUrl=QUrl(s);
     treeWidget=new TreeWidget(this);
     treeWidget->setHeaderLabel(QString());
-    //    treeWidget->setRootIsDecorated( false );
     treeWidget->setFrameStyle(QFrame::NoFrame);
     infoLabel=new QLabel(QObject::tr("Channels List"));
     refreshButton=new QToolButton(this);
@@ -78,7 +77,7 @@ void ChannelList::handleInit()
             if(allChannels.find(name)==allChannels.end())
                 allChannels.insert(name,url);
             else
-                 allChannels.insertMulti(name,url);
+                allChannels.insertMulti(name,url);
         }
         item->setExpanded(false);
     }
@@ -198,8 +197,8 @@ void ChannelList::handleModifyName()
 {
     QTreeWidgetItem *item=treeWidget->currentItem();
     QString name=item->text(0);
-    QString url=allChannels[name];
     bool ok;
+    QString url=allChannels[name];
     QString newName=QInputDialog::getText(this,QObject::tr("Please input the New Channel Name"),QObject::tr("New Channel Name"),QLineEdit::Normal,name,&ok);
     if(ok&&newName!=name&&(!newName.isEmpty()))
     {

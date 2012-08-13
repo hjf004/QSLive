@@ -17,7 +17,6 @@ public:
     CentralWidget(QWidget *parent=0);
     ChannelList *channelList;
     void initVideo(QString);
-    void setToolBoxVisualble(bool);
     void setSource(QString);
     bool showFlag;
     void readConfig();
@@ -40,7 +39,6 @@ private:
     QVBoxLayout *vlayout;
     QNetworkAccessManager *nm;
     SpProcess *process;
-    QString bin;
     QString xmlUrl;
     bool playFlag;
     void parseConfig(QString);
@@ -57,7 +55,6 @@ public slots:
     void handlePlayState(Phonon::State newstate, Phonon::State oldstate);
     void handleListReady(bool);
     void handleProcessFinished(int exitCode, QProcess::ExitStatus exitStatus);
-//    void handleProgress(int);
 };
 
 #endif // CENTRALWIDGET_H

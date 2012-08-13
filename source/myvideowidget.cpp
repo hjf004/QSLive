@@ -29,12 +29,6 @@ void myVideoWidget::keyReleaseEvent(QKeyEvent *ke)
             cWidget->handlePrev();
     }
 }
-
-void myVideoWidget::setSource(Phonon::MediaObject *s)
-{
-    source=s;
-}
-
 void myVideoWidget::setParentWidget(CentralWidget *c)
 {
     cWidget=c;
