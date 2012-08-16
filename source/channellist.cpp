@@ -4,6 +4,8 @@
 ChannelList::ChannelList(QString s,QWidget *parent):QWidget(parent)
 {
     listUrl=QUrl(s);
+    rp=0;
+    parser=0;
     treeWidget=new TreeWidget(this);
     treeWidget->setHeaderLabel(QString());
     treeWidget->setFrameStyle(QFrame::NoFrame);
@@ -35,13 +37,8 @@ void ChannelList::RefreshList()
 {
     treeWidget->clear();
     allChannels.clear();
+    channels.clear();
     emit listReady(false);
-    treeWidget->setColumnCount(1);
-    QTreeWidgetItem *item;
-    item=new QTreeWidgetItem(treeWidget,QStringList(QObject::tr("Favorite Channels")));
-    treeWidget->addTopLevelItem(item);
-    readList();
-    treeWidget->expandAll();
     QNetworkAccessManager *am=new QNetworkAccessManager();
     QNetworkRequest rq(listUrl);
     rp=am->get(rq);
@@ -51,23 +48,28 @@ void ChannelList::RefreshList()
 
 void ChannelList::getList()
 {
+    if(parser!=0)
+        delete parser;
     parser=new XmlParser(rp->readAll());
     emit getFinished();
 }
 
 void ChannelList::handleInit()
 {
+    treeWidget->clear();
+    treeWidget->setColumnCount(1);
+    QTreeWidgetItem *item,*child;
+    item=new QTreeWidgetItem(treeWidget,QStringList(QObject::tr("Favorite Channels")));
+    treeWidget->addTopLevelItem(item);
+    readList();
     channels=parser->getInfo();
     QMap<QString,QStringList>::iterator itr=channels.begin();
-    QTreeWidgetItem *item;
-    QTreeWidgetItem *child;
     for(;itr!=channels.end();itr++)
     {
         QStringList group(itr.key());
         item=new QTreeWidgetItem(treeWidget,group);
         treeWidget->addTopLevelItem(item);
         QStringList t=itr.value();
-        qDebug()<<"Group "<<itr.key();
         for(int i=0;i<t.size()/2;i++)
         {
             QString name=t.at(i*2);
@@ -79,7 +81,6 @@ void ChannelList::handleInit()
             else
                 allChannels.insertMulti(name,url);
         }
-        item->setExpanded(false);
     }
     item=treeWidget->topLevelItem(0);
     treeWidget->setCurrentItem(item);

@@ -133,7 +133,6 @@ void CentralWidget::handleChoose(QTreeWidgetItem *t, int c)
     channelList->treeWidget->setCurrentItem(t);
     QString channel=t->text(c);
     QString url=channelList->allChannels[channel];
-    qDebug()<<url;
     if(url.isEmpty())
         return;
     handleStop();
@@ -142,7 +141,6 @@ void CentralWidget::handleChoose(QTreeWidgetItem *t, int c)
     if(process->startSp(url))
     {
         QString pu(process->getPlayUrl());
-        qDebug()<<pu;
         initVideo(pu);
         infoLabel->setText(tr("Connecting..."));
         connect(process,SIGNAL(readyPlay()),this,SLOT(handlePlay()));
@@ -222,10 +220,8 @@ void CentralWidget::handleProcessFinished(int exitCode, QProcess::ExitStatus exi
 void CentralWidget::handlePlayClick()
 {
     qreal volume=audioOutput->volume();
-    qDebug()<<volume;
     handlePlayOrPause(!playFlag);
     audioOutput->setVolume(volume);
-    qDebug()<<audioOutput->volume();
 }
 
 void CentralWidget::readConfig()
@@ -248,7 +244,6 @@ void CentralWidget::parseConfig(QString config)
         QString url(f.readLine());
         i=url.indexOf('=');
         xmlUrl=url.mid(i+1).trimmed();
-        qDebug()<<xmlUrl;
         if(channelList!=0)
             channelList->setListUrl(xmlUrl);
         QString inport(f.readLine());
