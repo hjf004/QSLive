@@ -143,6 +143,7 @@ void CentralWidget::handleChoose(QTreeWidgetItem *t, int c)
         QString pu(process->getPlayUrl());
         initVideo(pu);
         infoLabel->setText(tr("Connecting..."));
+		channelList->setChannelLabel(channel);
         connect(process,SIGNAL(readyPlay()),this,SLOT(handlePlay()));
         connect(process,SIGNAL(progressInfo(int)),progressBar,SLOT(setValue(int)));
     }
@@ -151,6 +152,7 @@ void CentralWidget::handleChoose(QTreeWidgetItem *t, int c)
 void CentralWidget::handleStop()
 {
     mediaObject->stop();
+	channelList->setChannelLabel("None");
     if(process->state()!=QProcess::NotRunning)
     {
         process->close();
@@ -176,7 +178,7 @@ void CentralWidget::setSource(QString u)
 void CentralWidget::handlePlay()
 {
     disconnect(process,SIGNAL(readyRead()),process,SLOT(parseState()));
-    handlePlayOrPause(true);
+	handlePlayOrPause(true);
     infoLabel->setText(tr("Buffering..."));
     volumeSlider->setEnabled(true);
     progressBar->setEnabled(true);

@@ -4,47 +4,47 @@
 <context>
     <name>CentralWidget</name>
     <message>
-        <location filename="../../source/centralwidget.cpp" line="103"/>
+        <location filename="../../source/centralwidget.cpp" line="97"/>
         <source>Pause</source>
         <translation type="unfinished">暂停</translation>
     </message>
     <message>
-        <location filename="../../source/centralwidget.cpp" line="103"/>
+        <location filename="../../source/centralwidget.cpp" line="97"/>
         <source>Play</source>
         <translation type="unfinished">播放</translation>
     </message>
     <message>
-        <location filename="../../source/centralwidget.cpp" line="112"/>
+        <location filename="../../source/centralwidget.cpp" line="106"/>
         <source>Enter Full Screen</source>
         <translation type="unfinished">全屏播放</translation>
     </message>
     <message>
-        <location filename="../../source/centralwidget.cpp" line="117"/>
+        <location filename="../../source/centralwidget.cpp" line="111"/>
         <source>Exit Full Screen</source>
         <translation type="unfinished">退出全屏</translation>
     </message>
     <message>
-        <location filename="../../source/centralwidget.cpp" line="126"/>
+        <location filename="../../source/centralwidget.cpp" line="120"/>
         <source>Hide Channel List</source>
         <translation type="unfinished">隐藏频道列表</translation>
     </message>
     <message>
-        <location filename="../../source/centralwidget.cpp" line="126"/>
+        <location filename="../../source/centralwidget.cpp" line="120"/>
         <source>Show Channel List</source>
         <translation type="unfinished">显示频道列表</translation>
     </message>
     <message>
-        <location filename="../../source/centralwidget.cpp" line="158"/>
+        <location filename="../../source/centralwidget.cpp" line="145"/>
         <source>Connecting...</source>
         <translation type="unfinished">正在连接...</translation>
     </message>
     <message>
-        <location filename="../../source/centralwidget.cpp" line="172"/>
+        <location filename="../../source/centralwidget.cpp" line="161"/>
         <source>Disconnected</source>
         <translation type="unfinished">未连接</translation>
     </message>
     <message>
-        <location filename="../../source/centralwidget.cpp" line="193"/>
+        <location filename="../../source/centralwidget.cpp" line="182"/>
         <source>Buffering...</source>
         <translation type="unfinished">缓冲中...</translation>
     </message>
@@ -117,37 +117,37 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../../source/centralwidget.cpp" line="15"/>
+        <location filename="../../source/centralwidget.cpp" line="12"/>
         <source>Disconnected</source>
         <translation type="unfinished">未连接</translation>
     </message>
     <message>
-        <location filename="../../source/centralwidget.cpp" line="20"/>
+        <location filename="../../source/centralwidget.cpp" line="17"/>
         <source>Hide Channel List</source>
         <translation type="unfinished">隐藏频道列表</translation>
     </message>
     <message>
-        <location filename="../../source/centralwidget.cpp" line="23"/>
+        <location filename="../../source/centralwidget.cpp" line="20"/>
         <source>Enter Full Screen</source>
         <translation type="unfinished">全屏播放</translation>
     </message>
     <message>
-        <location filename="../../source/centralwidget.cpp" line="26"/>
+        <location filename="../../source/centralwidget.cpp" line="23"/>
         <source>Previous Channel</source>
         <translation type="unfinished">上一个频道</translation>
     </message>
     <message>
-        <location filename="../../source/centralwidget.cpp" line="30"/>
+        <location filename="../../source/centralwidget.cpp" line="27"/>
         <source>Play</source>
         <translation type="unfinished">播放</translation>
     </message>
     <message>
-        <location filename="../../source/centralwidget.cpp" line="34"/>
+        <location filename="../../source/centralwidget.cpp" line="31"/>
         <source>Stop</source>
         <translation type="unfinished">停止</translation>
     </message>
     <message>
-        <location filename="../../source/centralwidget.cpp" line="37"/>
+        <location filename="../../source/centralwidget.cpp" line="34"/>
         <source>Next Channel</source>
         <translation type="unfinished">下一个频道</translation>
     </message>
@@ -277,32 +277,41 @@
         <translation type="unfinished">添加到收藏列表</translation>
     </message>
     <message>
-        <location filename="../../source/channellist.cpp" line="11"/>
         <source>Channels List</source>
+        <translation type="obsolete">频道列表</translation>
+    </message>
+    <message>
+        <location filename="../../source/channellist.cpp" line="10"/>
+        <source>Channel List</source>
         <translation type="unfinished">频道列表</translation>
     </message>
     <message>
-        <location filename="../../source/channellist.cpp" line="14"/>
+        <location filename="../../source/channellist.cpp" line="12"/>
+        <source>Current Playing:None</source>
+        <translation type="unfinished">当前播放:None</translation>
+    </message>
+    <message>
+        <location filename="../../source/channellist.cpp" line="15"/>
         <source>Refresh Channel List.</source>
         <translation type="unfinished">刷新频道列表</translation>
     </message>
     <message>
-        <location filename="../../source/channellist.cpp" line="41"/>
+        <location filename="../../source/channellist.cpp" line="62"/>
         <source>Favorite Channels</source>
         <translation type="unfinished">收藏的频道</translation>
     </message>
     <message>
-        <location filename="../../source/channellist.cpp" line="160"/>
+        <location filename="../../source/channellist.cpp" line="161"/>
         <source>Channel Name=</source>
         <translation type="unfinished">频道名称=</translation>
     </message>
     <message>
-        <location filename="../../source/channellist.cpp" line="162"/>
+        <location filename="../../source/channellist.cpp" line="163"/>
         <source>Channel Url=</source>
         <translation type="unfinished">频道地址=</translation>
     </message>
     <message>
-        <location filename="../../source/channellist.cpp" line="163"/>
+        <location filename="../../source/channellist.cpp" line="164"/>
         <source>Channel Info</source>
         <translation type="unfinished">频道信息</translation>
     </message>
@@ -332,31 +341,36 @@
         <translation type="unfinished">新地址</translation>
     </message>
     <message>
+        <location filename="../../source/channellist.cpp" line="241"/>
+        <source>Current Playing:</source>
+        <translation type="unfinished">当前播放:</translation>
+    </message>
+    <message>
         <source>Channel Name</source>
         <translation type="obsolete">频道</translation>
     </message>
     <message>
-        <location filename="../../source/treewidget.cpp" line="6"/>
+        <location filename="../../source/treewidget.cpp" line="5"/>
         <source>&amp;View Channel Url</source>
         <translation type="unfinished">查看频道地址(&amp;V)</translation>
     </message>
     <message>
-        <location filename="../../source/treewidget.cpp" line="7"/>
+        <location filename="../../source/treewidget.cpp" line="6"/>
         <source>&amp;Add to Favorite Channel List</source>
         <translation type="unfinished">添加到收藏列表(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../../source/treewidget.cpp" line="8"/>
+        <location filename="../../source/treewidget.cpp" line="7"/>
         <source>&amp;Remove From Channel List</source>
         <translation type="unfinished">从列表中删除</translation>
     </message>
     <message>
-        <location filename="../../source/treewidget.cpp" line="9"/>
+        <location filename="../../source/treewidget.cpp" line="8"/>
         <source>Modify Channel &amp;Name</source>
         <translation type="unfinished">修改频道名称(&amp;N)</translation>
     </message>
     <message>
-        <location filename="../../source/treewidget.cpp" line="10"/>
+        <location filename="../../source/treewidget.cpp" line="9"/>
         <source>Modify Channel &amp;Url</source>
         <translation type="unfinished">修改频道地址(&amp;U)</translation>
     </message>

@@ -7,9 +7,9 @@ ChannelList::ChannelList(QString s,QWidget *parent):QWidget(parent)
     rp=0;
     parser=0;
     treeWidget=new TreeWidget(this);
-    treeWidget->setHeaderLabel(QString());
+    treeWidget->setHeaderLabel(QObject::tr("Channel List"));
     treeWidget->setFrameStyle(QFrame::NoFrame);
-    infoLabel=new QLabel(QObject::tr("Channels List"));
+    infoLabel=new QLabel(QObject::tr("Current Playing:None"));
     refreshButton=new QToolButton(this);
     refreshButton->setIcon(QIcon(":/resource/pic/refresh.png"));
     refreshButton->setToolTip(QObject::tr("Refresh Channel List."));
@@ -234,4 +234,9 @@ bool ChannelList::inTheFavoriteList(QString name)
             return true;
     }
     return false;
+}
+
+void ChannelList::setChannelLabel(QString str)
+{
+	infoLabel->setText(QObject::tr("Current Playing:").append(str));
 }

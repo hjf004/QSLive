@@ -20,6 +20,7 @@ public:
     void readList();
     void saveList();
     bool inTheFavoriteList(QString);
+	void setChannelLabel(QString);
 private:
     QToolButton *refreshButton;
     QLabel *infoLabel;
